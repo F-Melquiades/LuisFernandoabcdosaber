@@ -21,7 +21,8 @@ from tipoatividade.views import fim
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('escola.urls')),
-    path('tipoatividade/', inicio, name='inicio'),
-    path('tipoatividade/fim', fim, name='fim')
+    path('escola/', include('escola.urls')),
+    path('tipoatividade/', include('tipoatividade.urls')),
+   # path('tipoatividade/', inicio, name='inicio'),
+   # path('tipoatividade/fim', fim, name='fim')
 ]
