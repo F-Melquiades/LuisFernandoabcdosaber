@@ -3,10 +3,10 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse('<h3>Esta é a página de index<h3>')
+    return HttpResponse('<html><body><h2>Página de Resposta</h2><p>Olá, esta é a página de resposta</p></body></html>')
 
 def abc123(request):
-    return HttpResponse('<h3>pagina abc<h3>')
+    return HttpResponse('abc 123')
 
 def escola(request):
     return render(request, 'escola.html')

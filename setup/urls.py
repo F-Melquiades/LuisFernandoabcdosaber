@@ -19,10 +19,11 @@ from django.urls import path, include
 from tipoatividade.views import inicio
 from tipoatividade.views import fim
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('escola/', include('escola.urls')),
     path('tipoatividade/', include('tipoatividade.urls')),
-   # path('tipoatividade/', inicio, name='inicio'),
-   # path('tipoatividade/fim', fim, name='fim')
+    path('titulo/', include('titulo.urls')),
+    path('aluno/', include('aluno.urls')),
 ]
