@@ -89,19 +89,16 @@
                 </thead>
 
                 <!-- linhas -->
+                {% for titulo in tipos_titulo_lista %}
                 <tr>
-                    <td> 1 </td>
-                    <td> Professor Doutor </td>
+                    <td> {{titulo.codigo}} </td>
+                    <td> {{titulo.descricao}} </td>
                 </tr>
+                {% empty %}
                 <tr>
-                    <td> 2 </td>
-                    <td> Professor Sabe-Tudo </td>
+                    <td colspan ="2" class="text-center">Não há Títulos cadastrados</td>
                 </tr>
-                <tr>
-                    <td> 3 </td>
-                    <td> Professor Estagiário </td>
-                </tr>
-
+                {% endfor %}
             </table>
 
         </div>
